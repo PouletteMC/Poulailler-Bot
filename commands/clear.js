@@ -6,7 +6,7 @@ module.exports = {
 	description: 'Clear !',
 	guildOnly: true,
 	execute(message) {
-		if(message.member.roles.cache.has(admin)){
+		if(message.member.roles.cache.has("688326963483377724")){
 			message.channel.bulkDelete(cls)
 			message.channel.bulkDelete(cls)
 			message.channel.bulkDelete(cls)
