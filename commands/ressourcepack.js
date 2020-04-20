@@ -1,7 +1,7 @@
 const { Client, MessageAttachment } = require('discord.js');
 module.exports = {
 	name: 'ressourcepack',
-	description: 'Envoie le ressourcepack',
+	description: 'Envoie le ressourcepack en MP',
 	aliases: ['rp', 'ressource'],
 	guildOnly: true,
 	execute(message, args) {

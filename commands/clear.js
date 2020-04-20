@@ -3,7 +3,7 @@ module.exports = {
 	name: 'clear',
 	cooldown: 5,
 	aliases: ['cls'],
-	description: 'Clear !',
+	description: 'Supprime 500 messages dans la conversation',
 	guildOnly: true,
 	execute(message) {
 		if(message.member.roles.cache.has("688326963483377724")){

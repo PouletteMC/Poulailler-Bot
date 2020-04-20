@@ -1,6 +1,6 @@
 module.exports = {
 	name: 'reload',
-	description: 'Reloads a command',
+	description: 'Recharge une commande. A utiliser si une commande est modifiée.',
 	execute(message, args) {
 		if(message.member.roles.cache.has("688326963483377724")){
         if (!args.length) return message.channel.send(`${message.author} tu n'as pas précisé la commande à recharger !`);

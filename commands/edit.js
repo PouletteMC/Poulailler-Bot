@@ -1,8 +1,7 @@
 const clr = (2)
 module.exports = {
 	name: 'edit',
-    description: 'Fait dire quelquechose au bot',
-    guildOnly: true,
+    description: 'Changer le message précédent du bot',
 	execute(message, args) {
         
     if(message.member.roles.cache.has("688326963483377724")){

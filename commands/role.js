@@ -2,7 +2,7 @@ const del = (1);
 module.exports = {
 	name: 'role',
 	cooldown: 5,
-	description: 'Donner un role à un utilisateur',
+	description: 'Donner un role à un utilisateur - incomplet',
 	guildOnly: true,
     args: true,
     usage: '<user> <role>',
