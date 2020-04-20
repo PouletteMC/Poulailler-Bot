@@ -1,8 +1,9 @@
+const { Client, MessageEmbed } = require('discord.js');
+const client = new Client();
 module.exports = {
 	name: 'info',
 	cooldown: 5,
 	description: `Si tu souhaite des informations supplémentaires sur le serveur, le bot ou même sur toi :wink:`,
-	guildOnly: true,
     args: true,
     usage: '<user ou server ou bot>',
 	execute(message, args) {
@@ -17,14 +18,14 @@ module.exports = {
 			console.log(`${message.author.username} a demandé les infos du bot`)
 		}
 		else if (args[0] === 'serveur') {
-			message.member.send(`Nom du serveur : ${message.guild.name}\nMembres : ${message.guild.memberCount}\nDate de création : ${message.guild.createdAt}\nRégion : ${message.guild.region}`)
+			message.member.send(`**Nom du serveur :** ${message.guild.name}\n**Membres :** ${message.guild.memberCount}\n**Date de création :** ${message.guild.createdAt}\n**Région :** ${message.guild.region}`)
 			console.log(`Les infos du serveur ont été envoyées à ${message.author.username}`);
 		}
 		else if (args[0] === 'user') {
-			message.channel.send(`**Nom d'utilisateur :** ${message.author.username}\n**Identifiant :** ${message.author.id}`)
+			message.member.send(`**Nom d'utilisateur :** ${message.author.username}\n**Identifiant :** ${message.author.id}`)
 			console.log(`${message.author.username} à demandé ses informations`);
 		} else {
-			message.send(`Il manque un argument !`)
+			message.member.send('Il manque des arguments...')
 		}
 	},
 };

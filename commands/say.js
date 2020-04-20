@@ -1,3 +1,5 @@
+const roles = require('./roles.json');
+let admin = roles.admin;
 module.exports = {
 	name: 'say',
     description: 'Fait dire quelquechose au bot',
@@ -5,7 +7,7 @@ module.exports = {
     guildOnly: true,
 	execute(message, args) {
         
-    if(message.member.roles.cache.has("688326963483377724")){
+    if(message.member.roles.cache.has(admin)){
         const sayMessage = args.join(" ");
         message.delete()
         message.channel.send(sayMessage)

@@ -10,11 +10,12 @@ module.exports = {
         if (!args.length) {
             data.push('Voilà la liste des commandes');
             data.push(commands.map(command => command.name).join(', '));
-            data.push(`\nPour des informations sur une commande spécifique, tape \`${prefix}help <nom de la commande>\`.\nCertaines commandes sont disponibles en DM mais la plupart ne peut servir que sur le serveur !`);
+            data.push(`\nPour des informations sur une commande spécifique, tape \`${prefix}help <nom de la commande>\`. Cette fonctionnalité est disponible en DM`);
 
             return message.author.send(data, { split : true})
                 .then(()=> {
                     if (message.channel.type ==='dm') return;
+                    message.reply('Tu as reçu les commandes en DM');
                 })
                 .catch(error => {
                     console.error(`Impossible d'envoyer un DM à ${message.author.tag}.\n`, error);

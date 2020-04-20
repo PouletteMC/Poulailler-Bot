@@ -1,10 +1,13 @@
+const roles = require('./roles.json');
+let admin = roles.admin;
 const clr = (2)
 module.exports = {
 	name: 'edit',
-    description: 'Changer le message précédent du bot',
+    description: 'Fait dire quelquechose au bot',
+    guildOnly: true,
 	execute(message, args) {
         
-    if(message.member.roles.cache.has("688326963483377724")){
+    if(message.member.roles.cache.has(admin)){
         message.channel.bulkDelete(clr)
         const editMessage = args.join(" ")
         message.channel.send(editMessage)

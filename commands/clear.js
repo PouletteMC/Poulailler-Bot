@@ -1,12 +1,14 @@
+const roles = require('./roles.json');
+let admin = roles.admin;
 const cls = (100)
 module.exports = {
 	name: 'clear',
 	cooldown: 5,
 	aliases: ['cls'],
-	description: 'Supprime 500 messages dans la conversation',
+	description: 'Clear !',
 	guildOnly: true,
 	execute(message) {
-		if(message.member.roles.cache.has("688326963483377724")){
+		if(message.member.roles.cache.has(admin)){
 			message.channel.bulkDelete(cls)
 			message.channel.bulkDelete(cls)
 			message.channel.bulkDelete(cls)

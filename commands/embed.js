@@ -2,7 +2,7 @@ const { Client, MessageEmbed } = require('discord.js');
 const client = new Client();
 module.exports = {
 	name: 'embed',
-	description: 'commande de test',
+	description: 'test embed',
 	guildOnly: true,
 	execute(message, args) {
 		message.delete()

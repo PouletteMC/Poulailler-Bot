@@ -2,6 +2,8 @@ const fs = require('fs');
 const Discord = require('discord.js');
 const { Permissions } = require('discord.js');
 const { prefix, token } = require('./config.json');
+const ids = require('./config.json');
+let bienvenue = ids.bienvenue;
 const client = new Discord.Client();
 const cooldowns = new Discord.Collection();
 client.commands = new Discord.Collection();
@@ -13,19 +15,17 @@ for (const file of commandFiles) {
 	client.commands.set(command.name, command);
 }
 
-
 client.on('ready', () => {
-    console.clear()
-    console.log(`${client.user.tag} est en ligne !`)
-    client.user.setActivity("Chicken Simulator 2020", { type: "PLAYING"});
+  console.log(`${client.user.tag} est en ligne !`)
+  client.user.setActivity("Chicken simulator 2020", { type: "PLAYING"});
 });
 
 
 client.on('guildMemberAdd', member => {
     console.log('Un utilisateur a rejoint le serveur')
-    var channel = member.guild.channels.cache.find(channel => channel.id == "697893965441007616");
-    channel.send(`${member} a rejoint le serveur. Nous sommes désormais ${channel.guild.MemberCount} !`)
-    var Role = member.guild.roles.cache.find(role => role.id == "688862435909697536");
+    var channel = member.guild.channels.cache.find(channel => channel.id = bienvenue);
+    member.send(`${member} a rejoint le serveur. Nous sommes désormais`)
+    var Role = member.guild.roles.cache.find(role => role.id == "701523376786899036");
     member.roles.add(Role,"Reason");
     member.send(`Bienvenue sur le serveur !\n \nNotre Discord à pour but de vous communiquer des informations sur les événements et chagements à venir.\nIl met aussi en relation les joueurs et les différentes équipes !\nTu as accès à quelques commandes :\n          - Tape !ressourcepack, !rp ou !ressource pour recevoir le ressourcepack du serveur !\n          - Tape !info pour voir quelques informations à propos du discord\n          - Tape !ping pour voir si le bot est en ligne !\n \nMerci de nous avoir rejoints et bon jeux !`)
   });

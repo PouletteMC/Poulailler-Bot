@@ -1,8 +1,10 @@
+const roles = require('./roles.json');
+let admin = roles.admin;
 module.exports = {
 	name: 'reload',
-	description: 'Recharge une commande. A utiliser si une commande est modifiée.',
+	description: 'Reloads a command',
 	execute(message, args) {
-		if(message.member.roles.cache.has("688326963483377724")){
+		if(message.member.roles.cache.has(admin)){
         if (!args.length) return message.channel.send(`${message.author} tu n'as pas précisé la commande à recharger !`);
 		const commandName = args[0].toLowerCase();
 		const command = message.client.commands.get(commandName)

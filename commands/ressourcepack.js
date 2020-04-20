@@ -1,15 +1,17 @@
+const roles = require('./roles.json');
+let membre = roles.membre;
 const { Client, MessageAttachment } = require('discord.js');
 module.exports = {
 	name: 'ressourcepack',
-	description: 'Envoie le ressourcepack en MP',
+	description: 'Envoie le ressourcepack',
 	aliases: ['rp', 'ressource'],
 	guildOnly: true,
 	execute(message, args) {
 
-	if (message.member.roles.cache.has("688862435909697536")){
+	if (message.member.roles.cache.has(membre)){
 		message.delete()
 		const attachment = new MessageAttachment('./FuturaVolaille.zip');
-		message.channel.send(attachment)
+		message.member.send(attachment)
 		console.log(`RessourcePack envoyé à ${message.author.username}`);
 
 	}else {

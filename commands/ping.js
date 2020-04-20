@@ -1,6 +1,6 @@
 module.exports = {
 	name: 'ping',
-	description: 'Vérifie si le bot répond bien aux commandes',
+	description: 'Ping!',
 	guildOnly: true,
 	execute(message, args) {
 		message.delete()
