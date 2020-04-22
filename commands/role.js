@@ -7,7 +7,7 @@ module.exports = {
     args: true,
     usage: '<user> <role>',
 	execute(message, args) {
-		message.channel.bulkDelete(del)
+		message.delete().catch(O_o=>{});
 		if (args[0] === 'foo') {
 			return message.channel.send('bar');
 		}

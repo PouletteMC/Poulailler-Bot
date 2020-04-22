@@ -3,8 +3,10 @@ module.exports = {
 	description: 'Ping!',
 	guildOnly: true,
 	execute(message, args) {
-		message.delete()
-		message.channel.send('Le bot est en ligne')
-		console.log(`${message.author.username} nous demande !`);
+		message.delete().catch(O_o=>{});
+		message.channel.send("Pinging ...")
+			.then((msg) => {
+				msg.edit(`Ping: ${Date.now() - msg.createdTimestamp}`)
+		})
 	},
 };
