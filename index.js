@@ -2,12 +2,15 @@ const fs = require('fs');
 const Discord = require('discord.js');
 const { prefix, token } = require('./config.json');
 const id = require('./config.json');
+
 let bienvenue = id.bienvenue;
-let membre = id.membre
+let membre = id.membre;
+
 const client = new Discord.Client();
 const cooldowns = new Discord.Collection();
-client.commands = new Discord.Collection();
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
+
+client.commands = new Discord.Collection();
 
 
 for (const file of commandFiles) {
@@ -19,9 +22,7 @@ for (const file of commandFiles) {
 client.on('ready', () => { //lorsque le bot a démarré
 
   console.log(`${client.user.tag} est en ligne !`) //On envoie un message dans la console
-  client.user.setActivity("Chicken Simulator 2020", { type: "PLAYING"}) //on met une activité au bot
-  client.user.setStatus("online");
-
+  client.user.setActivity("Chicken Simulator", { type: "PLAYING"}) //on met une activité au bot
 });
 
 
