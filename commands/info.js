@@ -17,7 +17,7 @@ module.exports = {
 			.setColor('#10ff00')
 			.setTitle('Bot Poulailler')
 			.setThumbnail(icon)
-			.setFooter('Par PouletteMC · Version 1.2')
+			.setFooter('Par PouletteMC · Version 1.1')
 			message.member.send(embed)
 			console.log(`${message.author.username} a demandé les infos du bot`)
 

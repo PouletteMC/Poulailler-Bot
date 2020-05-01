@@ -54,7 +54,9 @@ module.exports = {
                 return message.author.send(data, { split : true})
                     .then(() => {
                         if (message.channel.type ==='dm') return;
-                        message.reply('Tu as reçu les commandes en DM');
+                        message.reply('Tu as reçu les commandes en DM').then(msg => {
+                            msg.delete(5000)
+                        })
                     })
                     .catch(error => {
                         console.error(`Impossible d'envoyer un DM à ${message.author.tag}.\n`, error);
@@ -71,7 +73,7 @@ module.exports = {
             }
             
             data.push(`**Nom:** ${command.name}`);
-            if (command.aliases) data.push(`**Le prince ali** ${command.aliases.join(', ')}`);
+            if (command.aliases) data.push(`**Voici la liste des commandes** ${command.aliases.join(', ')}`);
             if (command.description) data.push(`**Description:** ${command.description}`);
             if (command.usage) data.push(`**Utilisation:** ${prefix}${command.name} ${command.usage}`);
             data.push(`**Cooldown:** ${command.cooldown || 0} seconde(s)`);

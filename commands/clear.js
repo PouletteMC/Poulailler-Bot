@@ -16,7 +16,6 @@ module.exports = {
 			message.channel.bulkDelete(cls).catch(O_o=>{});
 			message.channel.bulkDelete(cls).catch(O_o=>{});
 			console.log('Les messages ont été supprimés')
-			
 		}
 		else {
 			message.delete().catch(O_o=>{});
