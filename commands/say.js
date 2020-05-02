@@ -12,7 +12,7 @@ module.exports = {
         message.channel.send(sayMessage)
         console.log('le bot a parlé');
 
-    }else{
+    } else {
         message.delete().catch(O_o=>{});
         message.reply('Cette commande est réservés aux Admins.')
         console.log(`${message.author.username} a tenté d'utiliser la commande ${command.name}`)
