@@ -15,7 +15,7 @@ module.exports = {
 
     }else{
         message.delete().catch(O_o=>{});
-        message.reply('Cette commande est réservés aux Admins.')
+        message.reply('Cette commande est réservés aux admins.')
         console.log(`${message.author.username} a tenté d'utiliser la commande ${command.name}`)
         }
     }
