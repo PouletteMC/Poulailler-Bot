@@ -11,7 +11,7 @@ module.exports = {
 
 	if (message.member.roles.cache.has(membre)){
         message.delete().catch(O_o=>{});
-        message.channel.send(`http://www.poulettemc.fr`)
+        message.channel.send(`https://www.poulettemc.fr`)
         console.log(`Lien du site envoyé à ${message.author.username}`);
 
     }else{
