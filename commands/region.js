@@ -11,7 +11,8 @@ module.exports = {
 
         message.delete().catch(O_o=>{})
         message.guild.setRegion('london')
-            .then(message.guild.setRegion('europe'))
+			.then(message.guild.setRegion('europe'))
+			.then(console.log('la région a changé'))
 			.catch(console.error);
 		} else { console.log('it broke my dude')}
 	},
