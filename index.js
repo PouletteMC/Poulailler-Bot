@@ -1,4 +1,3 @@
-new Discord.Guild(client, data);
 const fs = require('fs');
 const Discord = require('discord.js');
 const { prefix, token } = require('./config.json');

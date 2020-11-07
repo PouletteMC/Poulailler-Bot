@@ -1,3 +1,4 @@
+const guild = new Discord.Guild(client, data);
 const id = require('../config.json');
 let admin = id.admin;
 module.exports = {
