@@ -11,7 +11,7 @@ module.exports = {
 
         message.delete().catch(O_o=>{})
         message.guild.setRegion('london')
-            .then(updated => console.log(`Updated guild region to ${updated.region}`))
+            .then(updated => message.guild.setRegion('paris'))
 			.catch(console.error);
 		} else { console.log('it broke my dude')}
 	},
