@@ -9,7 +9,7 @@ module.exports = {
 
         if (!args.length) {
 
-            return message.channel.send("Cette région n'éxiste pas. Les régions valides sont: amsterdam, india, southafrica, london, us-east, us-west, us-central, south-korea, russia, eu-central, sydney, brazil, eu-west, europ, us-south, hongkong, singapour, frankfurt, dubai, japan")
+            return message.channel.send("Il faut préciser une réfion ! Tape `!region list` pour voir la liste des régions disponibles")
 
         }
 
@@ -30,6 +30,10 @@ module.exports = {
                 case 'eu-west':
                     message.member.guild.setRegion('eu-west')
                     message.channel.send('Le serveur a été déplacé vers la région **eu-west**')
+                    break;
+
+                case 'list':
+                    message.member.channel.send(`Les régions valides sont: amsterdam, india, southafrica, london, us-east, us-west, us-central, south-korea, russia, eu-central, sydney, brazil, eu-west, europ, us-south, hongkong, singapour, frankfurt, dubai, japan`)
                     break;
 
                 case 'cycle':
