@@ -33,7 +33,7 @@ module.exports = {
                     break;
 
                 case 'list':
-                    message.member.channel.send(`Les régions valides sont: amsterdam, india, southafrica, london, us-east, us-west, us-central, south-korea, russia, eu-central, sydney, brazil, eu-west, europ, us-south, hongkong, singapour, frankfurt, dubai, japan`)
+                    message.channel.send(`Les régions valides sont: amsterdam, india, southafrica, london, us-east, us-west, us-central, south-korea, russia, eu-central, sydney, brazil, eu-west, europ, us-south, hongkong, singapour, frankfurt, dubai, japan`)
                     break;
 
                 case 'cycle':
