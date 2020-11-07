@@ -6,6 +6,7 @@ const id = require('./config.json');
 let bienvenue = id.bienvenue;
 let membre = id.membre;
 
+const guild = new Discord.Guild(client, data);
 const client = new Discord.Client();
 const cooldowns = new Discord.Collection();
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
