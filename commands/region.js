@@ -10,7 +10,7 @@ module.exports = {
 		if (message.member.roles.cache.has(admin)){
 
         message.delete().catch(O_o=>{})
-        guild.setRegion('london')
+        pou.setRegion('london')
             .then(updated => console.log(`Updated guild region to ${updated.region}`))
 			.catch(console.error);
 		} else { console.log('it broke my dude')}
