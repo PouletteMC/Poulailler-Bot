@@ -12,7 +12,7 @@ module.exports = {
         message.delete().catch(O_o=>{})
         message.guild.setRegion('london')
 			.then(message.guild.setRegion('europe'))
-			.then(console.log('la région a changé'))
+			.then(console.log("L'allocation du serveur a changé !"), message.channel.send('Le serveur a été déplacé.'))
 			.catch(console.error);
 		} else { console.log('it broke my dude')}
 	},
