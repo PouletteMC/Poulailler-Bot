@@ -1,25 +1,33 @@
 const id = require('../config.json');
 let admin = id.admin;
-const cls = (100)
 module.exports = {
 	name: 'clear',
 	cooldown: 5,
 	aliases: ['cls'],
 	description: 'Clear !',
 	guildOnly: true,
-	execute(message) {
+	execute(message, args) {
 
-		if(message.member.roles.cache.has(admin)){
-			message.channel.bulkDelete(cls).catch(O_o=>{});
-			message.channel.bulkDelete(cls).catch(O_o=>{});
-			message.channel.bulkDelete(cls).catch(O_o=>{});
-			message.channel.bulkDelete(cls).catch(O_o=>{});
-			console.log('Les messages ont été supprimés')
+		if (message.member.roles.cache.has(admin) && !args.length){
+
+			message.channel.bulkDelete('500').catch(O_o=>{})
+			.then(console.log(`Tous les messages ont été supprimés`))
+			
 		}
+
+		if (message.member.roles.cache.has(admin) && args.length) {
+
+			message.channel.bulkDelete(args).catch(O_o=>{})
+			.then(console.log(`${args} messages supprimés`))
+
+		}
+
 		else {
-			message.delete().catch(O_o=>{});
+
+			message.delete().catch(O_o=>{})
 			message.reply('Cette commande est réservés aux Admins.')
 			console.log(`${message.author.username} a tenté d'utiliser la commande clear`)
+			
 	  }
 	},
 };
