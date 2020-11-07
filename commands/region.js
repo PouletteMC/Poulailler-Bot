@@ -1,5 +1,6 @@
 const id = require('../config.json');
 let admin = id.admin;
+const guild = new Discord.Guild(client, data);
 
 module.exports = {
 	name: 'ping',
