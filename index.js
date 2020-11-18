@@ -8,6 +8,7 @@ let membre = id.membre;
 
 const client = new Discord.Client();
 const cooldowns = new Discord.Collection();
+const regions = new Discord.Collection();
 const commandFiles = fs.readdirSync('./commands').filter(file => file.endsWith('.js'));
 
 client.commands = new Discord.Collection();

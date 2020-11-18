@@ -10,10 +10,6 @@ module.exports = {
 	execute(message) {
 
 		if(message.member.roles.cache.has(admin)){
-			channel.bulkDelete(cls).catch(O_o=>{});
-			message.channel.bulkDelete(cls).catch(O_o=>{});
-			message.channel.bulkDelete(cls).catch(O_o=>{});
-			message.channel.bulkDelete(cls).catch(O_o=>{});
 			message.channel.bulkDelete(cls).catch(O_o=>{});
 			console.log('Les messages ont été supprimés')
 		}

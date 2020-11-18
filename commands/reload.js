@@ -5,6 +5,7 @@ module.exports = {
 	description: 'Reloads a command',
 	execute(message, args) {
 
+		
 		if(message.member.roles.cache.has(admin)){
 
 		if (!args.length) return message.channel.send(`${message.author} tu n'as pas précisé la commande à recharger !`);
