@@ -5,7 +5,7 @@ module.exports = {
     name: 'region',
     description: 'Change la région',
     guildOnly: true,
-    execute(message, args) {
+    execute(message) {
 
         if (!args.length) {
 
