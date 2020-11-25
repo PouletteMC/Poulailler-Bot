@@ -9,7 +9,7 @@ module.exports = {
 
         if (!args.length) {
 
-            return message.channel.send("Il faut préciser une réfion ! Tape `!region list` pour voir la liste des régions disponibles")
+            return message.channel.send("Il faut préciser une région ! Tape `!region list` pour voir la liste des régions disponibles")
 
         }
 

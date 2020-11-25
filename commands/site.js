@@ -14,7 +14,7 @@ module.exports = {
         message.channel.send(`https://www.poulettemc.fr`)
         console.log(`Lien du site envoyé à ${message.author.username}`);
 
-    }else{
+    } else {
         message.delete().catch(O_o=>{});
         message.reply('Cette commande est réservés aux Membres.')
         console.log(`${message.author.username} a tenté d'utiliser la commande ${command.name}`)
