@@ -38,11 +38,13 @@ client.on('guildMemberAdd', member => { // Lorsque qu'un utilisateur rejoint le 
 
     var Role = member.guild.roles.cache.find(role => role.id == membre);// On charge l'id du rôle membre
     member.roles.add(Role,"Reason"); // On donne le rôle au nouveau membre
-    member.send(`Bienvenue sur le serveur !\n \nNotre Discord à pour but de vous communiquer des informations sur les événements et chagements à venir.\nIl met aussi en relation les joueurs et les différentes équipes !\nTu as accès à quelques commandes :\n          - Tape !ressourcepack, !rp ou !ressource pour recevoir le ressourcepack du serveur !\n          - Tape !info pour voir quelques informations à propos du discord\n          - Tape !ping pour voir si le bot est en ligne !\n \nMerci de nous avoir rejoints et bon jeux !`) // On envoie ce texte en message privé
+    member.send(`Bienvenue sur le serveur !\n \nNotre Discord à pour but de vous communiquer des informations sur les événements et chagements à venir.\nIl met aussi en relation les joueurs et les différentes équipes !\nTu as accès à quelques commandes :\n          - Tape !info pour voir quelques informations à propos du discord\n          - Tape !ping pour voir si le bot est en ligne !\n \nMerci de nous avoir rejoints et bon jeu !`) // On envoie ce texte en message privé
 
   });
 
 
+
+  
 client.on('message', message => { // lorsqu'un message est envoyé
 
     if (!message.content.startsWith(prefix) || message.author.bot) return; // si le message ne comence pas par le prefix aller vers 'try'
