@@ -13,16 +13,13 @@ module.exports = {
     const amount = arguments.join(' '); // Amount of messages which should be deleted
 
     if (!amount)
-        message.channel.bulkDelete(100)
+        return message.channel.bulkDelete(100);
 
     if (isNaN(amount))
         return message.reply('The amount parameter isn`t a number!'); // Checks if the `amount` parameter is a number. If not, the command throws an error
 
     if (amount > 100)
         return message.reply('You can`t delete more than 100 messages at once!'); // Checks if the `amount` integer is bigger than 100
-
-    if (amount < 1)
-        return message.reply('You have to delete at least 1 message!'); // Checks if the `amount` integer is smaller than 1
 
     else {
         message.channel.bulkDelete(amount)
