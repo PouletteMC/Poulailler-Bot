@@ -22,7 +22,7 @@ module.exports = {
         return message.reply('You can`t delete more than 100 messages at once!'); // Checks if the `amount` integer is bigger than 100
 
     else {
-        message.channel.bulkDelete(amount)
+        message.channel.bulkDelete(amount + 1)
         console.log(`J'ai supprimé ${amount} messages`)
     }
 
