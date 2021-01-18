@@ -24,6 +24,7 @@ client.on('ready', () => { //lorsque le bot a démarré
 
   console.log(`${client.user.tag} est en ligne !`) //On envoie un message dans la console
   client.user.setActivity("Chicken Simulator", { type: "PLAYING"}) //on met une activité au bot
+  client.user.setStatus('dnd')
 });
 
 
