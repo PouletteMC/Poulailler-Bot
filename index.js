@@ -45,8 +45,8 @@ client.on('guildMemberAdd', member => { // Lorsque qu'un utilisateur rejoint le 
 
 
 
-  
-client.on('message', message => { // lorsqu'un message est envoyé
+
+client.on('message', async message => { // lorsqu'un message est envoyé
 
     if (!message.content.startsWith(prefix) || message.author.bot) return; // si le message ne comence pas par le prefix aller vers 'try'
 
@@ -78,9 +78,9 @@ client.on('message', message => { // lorsqu'un message est envoyé
     const timestamps = cooldowns.get(command.name); // timestamps prend la valeur du cooldown de la commande
     const cooldownAmount = (command.cooldown || 0) * 1000; // cooldownamount prend la valeur de cooldown ou 0 si pas de cooldown (*1000 pour tps en secondes)
 
-    if (timestamps.has(message.author.id)) { // 
+    if (timestamps.has(message.author.id)) { //
         const expirationTime = timestamps.get(message.author.if) + cooldownAmount; //
-        
+
     if (now < expirationTime) { // Si la date actuelle < a la date d'expiration
         const timeLeft = (expirationTime - now) / 1000; // timeleft prend la valeur date d'expiration - heure actuelle (/1000 pour récupérer un temps normal)
         return message.reply(`Attends encore ${timeLeft.toFixed(1)} seconde(s) avant de pouvoir utiliser \`${command.name}\` à nouveau}`); // envoyer ce message
@@ -88,7 +88,7 @@ client.on('message', message => { // lorsqu'un message est envoyé
     }
 
     try {
-        command.execute(message, args); 
+        command.execute(message, args);
 
     } catch (error) { // Si rien ne correspond
         console.error(error); // On envoie l'erreur dans la console -- évite un crash
