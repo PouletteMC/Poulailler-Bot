@@ -3,11 +3,11 @@ let membre = id.membre;
 const { Client, MessageAttachment } = require('discord.js');
 
 module.exports = {
-	name: 'site',
-	description: 'Envoie le lien du site',
-	aliases: ['web', 'website'],
+	name: 'voice',
+	description: 'Connecte le bot au channel vocal',
+	aliases: ['voix', 'vox'],
 	guildOnly: true,
-	execute(async message, args) {
+	execute(message, args) {
 
     if(message.member.voice.channel) {
       const connection = await message.member.voice.channel.join();

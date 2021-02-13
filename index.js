@@ -46,7 +46,7 @@ client.on('guildMemberAdd', member => { // Lorsque qu'un utilisateur rejoint le 
 
 
 
-client.on('message', async message => { // lorsqu'un message est envoyé
+client.on('message', message => { // lorsqu'un message est envoyé
 
     if (!message.content.startsWith(prefix) || message.author.bot) return; // si le message ne comence pas par le prefix aller vers 'try'
 
